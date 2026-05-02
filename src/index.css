@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-container,
+.wrapper {
+  background: #f5f5f5;
+}
+
+/* FINAL CLEAN RESET */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+/* LEFT CONTENT */
+.hero > div:first-child {
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+/* RIGHT IMAGE */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 0 !important;
+  top: -10% !important;
+  transform: none;
+  width: 60% !important;
+  height: 120% !important;
+  background: url("https://i.postimg.cc/5jdPRzT7/file-00000000ff3c7207b99897ee0d5daf64.png") no-repeat right center !important;
+  background-size: cover !important;
+  background-position: right center !important;
+  z-index: 0;
+}
+
+/* HEADER (LOGO + ICONS SAME LINE) */
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-icons {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 16px !important;
+  position: relative !important;
+}
+
+.user-icon, .cart-icon {
+  display: flex !important;
+  position: static !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.user-icon:hover, .cart-icon:hover {
+  opacity: 0.7 !important;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
